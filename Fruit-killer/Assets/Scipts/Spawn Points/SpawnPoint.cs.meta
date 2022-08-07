@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ca835223e550cc940905a7e26dcfcd15
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _spawnPointCharacter: {instanceID: 0}
+  - _prefabBlock: {fileID: 6268374998763679818, guid: 057b7d7ee97c9ef4b93d289b54fac9ae, type: 3}
+  - _mainCamera: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

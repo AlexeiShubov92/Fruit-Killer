@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97e05a506ac2b547b8ce61ba32e6aca, type: 3}
+  m_Name: Watermelon
+  m_EditorClassIdentifier: 
+  _mainSpriteBlock: {fileID: 21300000, guid: 893817b68090c354fa7b22df42366510, type: 3}
+  _leftBlock: {fileID: 21300000, guid: 3ff9ca70bf5ec8f499b6236c21c12398, type: 3}
+  _rightBlock: {fileID: 21300000, guid: b6bc1b3067e79404c8f7d3788a89cd17, type: 3}
+  _splat: {fileID: 21300000, guid: 44286f4d000d85045b5daad5f7fd30f2, type: 3}
+  _colorSplat: {r: 0.11868882, g: 1, b: 0, a: 0}
+  _tag: Fruit
+  _scaleX: 0.55
+  _scaleY: 0.55
