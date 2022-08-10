@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bomb : Block
+public class Bomb : Block, IBlock
 {
     [SerializeField] private ScriptableObjectBlock _bombCharacter;
 

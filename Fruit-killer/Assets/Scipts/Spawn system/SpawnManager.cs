@@ -54,12 +54,11 @@ public class SpawnManager : MonoBehaviour
     }
     private async void RunObject(SpawnPoint spawnPoint, int delayForSpawn)
     {
-        while (true)
-        {
-            spawnPoint.ActiveBlock(spawnPoint.PoolMap, Random.Range(0, 101));
-            
-            await Task.Delay(delayForSpawn);
-        }
+        spawnPoint.ActiveBlock(spawnPoint.PoolMap, Random.Range(0, 101));
+
+        await Task.Delay(delayForSpawn);
+
+        RunObject(GetSpawnPointForSpawn(_spawnPoints, _spawnPointsWithTheBestChanceForSpawn), _delayForSpawn);
     }
 
 

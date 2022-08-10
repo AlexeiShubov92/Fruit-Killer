@@ -22,4 +22,4 @@ MonoBehaviour:
   _maxStartSpeedY: 6
   _stepSpeedX: 0.05
   _stepSpeedY: 4
-  _chance: 15
+  _chance: 25

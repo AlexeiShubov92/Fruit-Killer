@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Fruit : Block
+public class Fruit : Block, IBlock
 {
     [SerializeField] private ScriptableObjectBlock[] _blockCharacters;
 

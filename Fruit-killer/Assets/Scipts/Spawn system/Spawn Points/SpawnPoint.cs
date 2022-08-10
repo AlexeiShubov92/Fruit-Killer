@@ -8,10 +8,9 @@ public class SpawnPoint : MonoBehaviour
     private Dictionary<(string Tag, int ChanceForSpawn), Queue<Block>> _poolMap;
     private List<(string Tag, int ChanceForSpawn)> _keysWithMaxChanceForSpawn;
 
-    private void Awake()
+    private void Start()
     {
-        //_poolMap = new Dictionary<(string Tag, int ChanceForSpawn), Queue<Block>>();
-        //_keysWithMaxChanceForSpawn = new List<(string Tag, int ChanceForSpawn)>();
+        _keysWithMaxChanceForSpawn = GetKeysWithMaxChanceForSpawn(_poolMap);
     }
 
     private List<(string Tag, int ChanceForSpawn)> GetKeysWithMaxChanceForSpawn(Dictionary<(string Tag, int ChanceForSpawn), Queue<Block>> poolMap)
@@ -37,8 +36,6 @@ public class SpawnPoint : MonoBehaviour
 
     public void ActiveBlock(Dictionary<(string Tag, int ChanceForSpawn), Queue<Block>> poolMap, int valueChance)
     {
-        _keysWithMaxChanceForSpawn = _keysWithMaxChanceForSpawn == null ? GetKeysWithMaxChanceForSpawn(poolMap) : _keysWithMaxChanceForSpawn;
-
         List <(string, int)> keyList = new List<(string, int)>();
 
         foreach (var item in poolMap)
@@ -53,8 +50,7 @@ public class SpawnPoint : MonoBehaviour
 
         var key = keyList[Random.Range(0, keyList.Count)];
         var block = poolMap[key].Dequeue();
-        block?.gameObject.SetActive(true);
-        if(block != null)
+        block.gameObject.SetActive(true);
         _poolMap[key].Enqueue(block);
     }
 
