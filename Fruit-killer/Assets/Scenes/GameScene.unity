@@ -182,6 +182,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca835223e550cc940905a7e26dcfcd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &167017018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167017019}
+  - component: {fileID: 167017020}
+  m_Layer: 0
+  m_Name: Spawn Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &167017019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167017018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 228651950}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167017020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167017018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72722b05e1044d74cbb51e4ea696a74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayForSpawn: 1000
+  _spawnPoints:
+  - {fileID: 448958018}
+  - {fileID: 1899413897}
+  - {fileID: 1965808139}
+  - {fileID: 50950699}
 --- !u!1001 &186652863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -339,6 +388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436615210}
+  - {fileID: 167017019}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1373,5 +1423,13 @@ PrefabInstance:
       propertyPath: _objectsForPool.Array.data[1]._factory
       value: 
       objectReference: {fileID: 289751499}
+    - target: {fileID: 7734901669017919235, guid: d2f21e69c1e3a674582fb04bcfbd4d88, type: 3}
+      propertyPath: _objectsForPool.Array.data[0]._countBlocks
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734901669017919235, guid: d2f21e69c1e3a674582fb04bcfbd4d88, type: 3}
+      propertyPath: _objectsForPool.Array.data[1]._countBlocks
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f21e69c1e3a674582fb04bcfbd4d88, type: 3}

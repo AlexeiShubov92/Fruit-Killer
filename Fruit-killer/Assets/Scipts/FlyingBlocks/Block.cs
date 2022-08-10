@@ -34,7 +34,9 @@ public abstract class Block : MonoBehaviour
     {
         if (_direction.y < 0 && transform.position.y < -mainCamera.orthographicSize * 2)
         {
-            Destroy(gameObject);
+            transform.position = _startPosition;
+            _direction = new Vector2(_startSpeedX, _startSpeedY);
+            gameObject.SetActive(false);
         }
     }
 

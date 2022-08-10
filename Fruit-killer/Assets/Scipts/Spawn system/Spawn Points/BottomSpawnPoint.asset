@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd3efa1c1901b9145bb5298d2f20434b, type: 3}
-  m_Name: LeftSpawnPoint
+  m_Name: BottomSpawnPoint
   m_EditorClassIdentifier: 
   _minPointToSpawnForX: 0
-  _maxPointToSpawnForX: 0
+  _maxPointToSpawnForX: 1
   _minPointToSpawnForY: 0
-  _maxPointToSpawnForY: 1
-  _minStartSpeedX: 0.5
+  _maxPointToSpawnForY: 0
+  _minStartSpeedX: 0.4
   _maxStartSpeedX: 0.6
-  _minStartSpeedY: 5
-  _maxStartSpeedY: 6
-  _stepSpeedX: 0.05
-  _stepSpeedY: 4
+  _minStartSpeedY: 6.5
+  _maxStartSpeedY: 7.26
+  _stepSpeedX: 0.03
+  _stepSpeedY: 5.78
+  _chance: 70

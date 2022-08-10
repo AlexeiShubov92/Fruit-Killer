@@ -12,7 +12,6 @@ public class Bomb : Block
     private void Update()
     {
         Move();
-        BlockOffScreen(_mainCamera);
     }
 
     public override void Slice()

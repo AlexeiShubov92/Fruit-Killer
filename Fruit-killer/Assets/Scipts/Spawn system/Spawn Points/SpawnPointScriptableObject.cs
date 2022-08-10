@@ -16,6 +16,8 @@ public class SpawnPointScriptableObject : ScriptableObject
     [Header("Speed reduction factor")]
     [SerializeField][Range(0.01f, 1f)] private float _stepSpeedX;
     [SerializeField][Range(0.001f, 20f)] private float _stepSpeedY;
+    [Header("Probability of choosing the Spawn Point to spawn")]
+    [SerializeField][Range(0, 100)] private float _chance;
 
     private float _startSpeedX;
     private float _startSpeedY;
@@ -50,4 +52,5 @@ public class SpawnPointScriptableObject : ScriptableObject
         }
     }
     public float StepSpeedY { get => _stepSpeedY; }
+    public float Chance { get => _chance; }
 }
