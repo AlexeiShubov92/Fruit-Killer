@@ -11,7 +11,6 @@ public abstract class Block : MonoBehaviour
     protected Camera _mainCamera;
     protected Color _colorSplat;
     protected Vector2 _direction;
-    protected Vector3 _startPosition;
 
     protected float _startSpeedX;
     protected float _stepSpeedX;
@@ -34,7 +33,7 @@ public abstract class Block : MonoBehaviour
     {
         if (_direction.y < 0 && transform.position.y < -mainCamera.orthographicSize * 2)
         {
-            transform.position = _startPosition;
+            transform.position = StartPosition;
             _direction = new Vector2(_startSpeedX, _startSpeedY);
             gameObject.SetActive(false);
         }
@@ -61,6 +60,6 @@ public abstract class Block : MonoBehaviour
     }
     public abstract void Slice();
 
-    public Vector3 StartPosition { get => _startPosition; set => _startPosition = value; }
+    public Vector3 StartPosition { get; set; }
     public string GetTag { get => tag; }
 }

@@ -8,7 +8,7 @@ public class SpawnPoint : MonoBehaviour
     private Dictionary<(string Tag, int ChanceForSpawn), Queue<Block>> _poolMap;
     private List<(string Tag, int ChanceForSpawn)> _keysWithMaxChanceForSpawn;
 
-    private void Start()
+    private void Awake()
     {
         _keysWithMaxChanceForSpawn = GetKeysWithMaxChanceForSpawn(_poolMap);
     }
