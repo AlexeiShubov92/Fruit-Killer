@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveStatePlayer : MonoBehaviour
+public class MoveStatePlayer : StatePlayer
 {
-    // Start is called before the first frame update
-    void Start()
+    public MoveStatePlayer(PlayerCharacter player)
     {
-        
+        _player = player;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Exit()
     {
-        
+        Debug.Log("Move Exit");
+    }
+    public override void Enter()
+    {
+        Debug.Log("Move Enter");
+    }
+    public override void Update()
+    {
+        _player.MovePlayer();
     }
 }

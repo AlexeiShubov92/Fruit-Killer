@@ -1,11 +1,25 @@
+using UnityEngine;
 public class IdleStatePlayer : StatePlayer
 {
+    public IdleStatePlayer(PlayerCharacter player)
+    {
+        _player = player;
+    }
+
     public override void Exit()
     {
-        _player.gameObject.SetActive(true);
+        Debug.Log("Idle Exit");
+
+        _player.PlayerIsActive = true;
     }
     public override void Enter()
     {
-        _player.gameObject.SetActive(false);
+        Debug.Log("Idle Enter");
+
+        _player.PlayerIsActive = false;
+    }
+    public override void Update()
+    {
+
     }
 }

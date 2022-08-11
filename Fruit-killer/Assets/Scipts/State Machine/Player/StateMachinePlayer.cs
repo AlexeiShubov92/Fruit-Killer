@@ -1,21 +1,16 @@
 public class StateMachinePlayer
 {
-    private StatePlayer _currentState;
-
-    public StateMachinePlayer(StatePlayer player)
-    {
-        _currentState = player;
-    }
+    public StatePlayer CurrentState { get; set; }
 
     public void Initialize(StatePlayer statePlayer)
     {
-        _currentState = statePlayer;
-        _currentState.Enter();
+        CurrentState = statePlayer;
+        CurrentState.Enter();
     }
     public void ChangeStatePlayer(StatePlayer newState)
     {
-        _currentState.Exit();
-        _currentState = newState;
-        _currentState.Enter();
+        CurrentState.Exit();
+        CurrentState = newState;
+        CurrentState.Enter();
     }
 }

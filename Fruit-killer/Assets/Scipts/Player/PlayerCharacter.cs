@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Camera _camera;
+
+    private Vector2 _targetPosition;
+
+    public void MovePlayer()
     {
-        
+        _targetPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = _targetPosition;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool PlayerIsActive
     {
-        
+        get
+        {
+            return gameObject.activeSelf;
+        }
+        set
+        {
+            gameObject.SetActive(value);
+        }
     }
 }
